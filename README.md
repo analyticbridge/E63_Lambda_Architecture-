@@ -1,4 +1,4 @@
-# E63_Lambda_Architecture- Sample code for E63_LA_Project. 
+E63_Lambda_Architecture- Sample code for E63_LA_Project. 
 
 Compile the code and run the package.
 
@@ -21,7 +21,7 @@ To send/recv  data to the streaming example, use: nc -lk ,
 
 nc -lk 9999     # to listen to port 9999 on local host 
 
-# send file to host port  nc localhost 9999 < textData.txt   
+send file to host port  nc localhost 9999 < textData.txt   
 
 Batch Processing Using Spark SQL : Open the terminal window  and run the code 
 
