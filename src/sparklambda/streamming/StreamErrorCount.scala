@@ -1,3 +1,4 @@
+package sparklambda.streamming
 import sparklambda.common.ErrorCount
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, Logging}

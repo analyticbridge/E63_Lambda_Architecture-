@@ -1,3 +1,4 @@
+package sparklambda.etl
 import sparklambda.common.ErrorCount
 import org.apache.spark.{SparkConf, SparkContext}
 
