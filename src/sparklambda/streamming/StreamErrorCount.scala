@@ -4,7 +4,8 @@ import ErrorCount
 import org.apache.spark.SparkConf
 import org.apache.spark.Logging
 import org.apache.spark.storage.StorageLevel
-import org.apache.spark.streaming.{Seconds, StreamingContext}
+import org.apache.spark.streaming.Seconds
+import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.StreamingContext._
 import org.apache.log4j.Level
 import org.apache.log4j.Logger
