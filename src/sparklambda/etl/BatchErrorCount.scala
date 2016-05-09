@@ -23,3 +23,4 @@ object BatchErrorCount {
     errCount.saveAsTextFile(args(2))
   }
 }
+//Done

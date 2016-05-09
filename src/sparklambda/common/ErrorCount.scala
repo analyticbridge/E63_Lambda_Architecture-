@@ -12,3 +12,4 @@ object ErrorCount {
       .reduceByKey(_+_) // Sum counts for each date
   }
 }
+//Done
