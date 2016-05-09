@@ -1,7 +1,6 @@
 package sparklambda.streaming
 
-import ErrorCount
-import org.apache.spark.SparkConf
+import sparklambda.ErrorCount
 import org.apache.spark.Logging
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark.streaming.Seconds
