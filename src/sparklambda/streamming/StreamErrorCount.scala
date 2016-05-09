@@ -21,7 +21,7 @@ object StreamingErrorCount extends Logging{
 
     //Configure the Streaming Context
 
-    val sparkConf = new SparkConf().
+    val sparkConf = new SparkConf()
       .setMaster(args(0))
       .setAppName(this.getClass.getCanonicalName)
 
