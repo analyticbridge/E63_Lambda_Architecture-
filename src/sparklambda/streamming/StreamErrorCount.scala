@@ -1,12 +1,12 @@
 package sparklambda.streaming
 
 import ErrorCount
-import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, Logging}
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.StreamingContext._
 import org.apache.log4j.{Level, Logger}
+import org.apache.spark.rdd.RDD
 
 
 object StreamingErrorCount extends Logging{

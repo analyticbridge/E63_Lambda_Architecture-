@@ -1,6 +1,6 @@
 package sparklambda.etl
 import ErrorCount
-import org.apache.spark.{SparkConf, SparkContext}.
+import org.apache.spark.{SparkConf, SparkContext}
 
 
 object BatchErrorCount {
