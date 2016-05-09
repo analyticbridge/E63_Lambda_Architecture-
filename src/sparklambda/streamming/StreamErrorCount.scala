@@ -1,5 +1,5 @@
 package sparklambda.streamming
-import sparklambda.common.ErrorCount
+import ErrorCount
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, Logging}
 import org.apache.spark.storage.StorageLevel
@@ -21,11 +21,11 @@ object StreamingErrorCount extends Logging{
 
     //Configure the Streaming Context
 
-    val sparkConf = new SparkConf()
+    val sparkConf = new SparkConf().
       .setMaster(args(0))
       .setAppName(this.getClass.getCanonicalName)
 
-    setStreamingLogLevels()
+   //setStreamingLogLevels()
 
 
     val ssc = new StreamingContext(sparkConf, Seconds(10))
@@ -56,17 +56,17 @@ object StreamingErrorCount extends Logging{
     ssc.awaitTermination()
   }
 
-
-  def setStreamingLogLevels() {
-    val log4jInitialized = Logger.getRootLogger.getAllAppenders.hasMoreElements
-    if (!log4jInitialized) {
+ //discraded as did not work 
+  //def setStreamingLogLevels() {
+   // val log4jInitialized = Logger.getRootLogger.getAllAppenders.hasMoreElements
+   // if (!log4jInitialized) {
       // We first log something to initialize Spark's default logging, then we override the
       // logging level.
-      logInfo("Setting log level to [WARN] for streaming example." +
-        " To override add a custom log4j.properties to the classpath.")
-      Logger.getRootLogger.setLevel(Level.WARN)
-    }
-  }
+     // logInfo("Setting log level to [WARN] for streaming example." +
+     //   " To override add a custom log4j.properties to the classpath.")
+     // Logger.getRootLogger.setLevel(Level.WARN)
+    //}
+  //}
 
   val updateFunc = (values: Seq[Int], state: Option[Int]) => {
     val currentCount = values.foldLeft(0)(_ + _)
